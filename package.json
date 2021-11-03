@@ -1,0 +1,17 @@
+{
+  "name": "movie-search-website-with-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Agustín López",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "jquery": "^3.6.0",
+    "sass": "^1.43.4"
+  }
+}

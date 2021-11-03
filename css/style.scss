@@ -1,0 +1,305 @@
+$focus-color: rgb(0, 119, 255);
+$background-color: #313259;
+$block-color: #4f5078;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    background-color: $background-color;
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    position: relative;
+    box-shadow: 0px 0px 5px 0px #000;
+    width: 100%;
+}
+nav {
+    padding: 10px;
+
+    max-width: 1920px;
+    display: block;
+    margin: 0 auto;
+    a {
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    h1,
+    i {
+        margin: 5px;
+        font-size: 22px;
+    }
+}
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 5px;
+    height: 100vh;
+    min-height: 500px;
+    max-height: 900px;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    h3 {
+        font-size: 36px;
+        color: #fff;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    form {
+        display: flex;
+        justify-content: space-evenly;
+        width: 90%;
+        margin-bottom: 50px;
+        max-width: 1280px;
+    }
+    input {
+        width: 90%;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+        font-size: 20px;
+    }
+    button {
+        display: block;
+        margin: 0 5px;
+        text-transform: uppercase;
+    }
+    input:focus {
+        outline: 2px solid $focus-color;
+    }
+}
+.btn-style {
+    background-color: $background-color;
+    padding: 10px;
+    margin: 5px auto;
+    border-radius: 5px;
+    color: #fff;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+.btn-style:hover {
+    background-color: $focus-color;
+}
+.container-movies {
+    opacity: 0;
+    transition: all 0.3s ease;
+    display: none;
+    position: relative;
+    min-height: 100vh;
+    h3 {
+        font-size: 26px;
+        color: #fff;
+        margin: 20px auto;
+        padding: 10px 5px;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+}
+#movies {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    max-width: 1230px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    text-align: center;
+    .movie-block {
+        width: 100%;
+        max-width: 225px;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 3px 0px #000;
+        background-color: $block-color;
+        transition: all 0.2s ease;
+        h4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 16px;
+            margin: 10px auto;
+            text-align: center;
+            min-height: 45px;
+        }
+        img {
+            width: 100%;
+        }
+        a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    .movie-block:hover {
+        transform: scale(1.05);
+    }
+}
+
+#movie {
+    display: flex;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 1280px;
+    box-shadow: 0px 0px 3px 0px #000;
+    background-color: #41426e;
+    border-radius: 5px;
+}
+
+.container-movie {
+    margin: 10px;
+}
+
+.movie-full {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    img {
+        margin: 10px 5px 10px 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 3px 0px #000;
+    }
+    h4 {
+        color: #fff;
+        font-size: 32px;
+        margin: 5px;
+    }
+    ul {
+        list-style: none;
+    }
+    li {
+        color: #fff;
+        margin: 10px 5px;
+    }
+    .movie-info {
+        background-color: $block-color;
+        box-shadow: inset 0px 0px 3px 0px #000;
+        padding: 10px;
+        margin: 10px 10px 10px 5px;
+        border-radius: 5px;
+    }
+    .data-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row wrap;
+        a {
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-weight: 500;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    color: #fff;
+    height: 50px;
+    text-align: center;
+    a {
+        color: #fff;
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 1280px) {
+    #movies {
+        max-width: 985px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #movies {
+        max-width: 740px;
+    }
+    .container-movie {
+        margin: 20px 10px 75px 10px;
+    }
+    .movie-full {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        img {
+            display: block;
+            margin: 10px auto;
+        }
+        .movie-info {
+            display: block;
+            margin: 10px;
+        }
+    }
+}
+@media (max-width: 750px) {
+    #movies {
+        max-width: 495px;
+    }
+}
+@media (max-width: 500px) {
+    #movies {
+        max-width: 320px;
+        .movie-block {
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+    nav {
+        text-align: center;
+        position: relative;
+        box-shadow: 0px 0px 15px 0px #000;
+        h1,
+        i {
+            font-size: 20px;
+        }
+    }
+    .container-form {
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            max-width: 1280px;
+            input {
+                margin: 10px auto;
+            }
+        }
+    }
+    .movie-full {
+        img {
+            margin: 15px auto 5px auto;
+            width: 240px;
+        }
+        .movie-info {
+            display: block;
+            margin: 10px 10px 15px 10px;
+        }
+    }
+}
